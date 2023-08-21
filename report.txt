@@ -1,0 +1,64 @@
+Overview of the analysis: 
+
+This analysis was done as an attempt to select applicants to be funded by the organization "Alphabet Soup". 
+The analysis hopes to find applicants with the greatest chance of success in their ventures based on data provided by their csv containing over 34k organizations.
+
+
+Results: 
+
+
+Data Preprocessing
+
+What variable(s) are the target(s) for your model?
+
+1. Is_successful
+
+What variable(s) are the features for your model?
+
+1. Application Type
+2. Affiliation
+3. Classification
+4. Use_case
+5. Organization
+6. Status
+7. Income_amt
+8. Special_considerations
+9. Ask_amt
+
+What variable(s) should be removed from the input data because they are neither targets nor features?
+
+1. EIN
+2. Name
+
+
+
+Compiling, Training, and Evaluating the Model
+
+
+How many neurons, layers, and activation functions did you select for your neural network model, and why?
+
+- The model with the highest accuracy which was manually trained had the following parameters:
+
+	Layer 1: 100 neurons, activation - relu
+	Layer 2: 75 neurons, activation - relu
+	Layer 3: 40 neurons, activation - tanh
+	Layer 4: 27 neurons, activation - tanh
+	Layer 5: 14 neurons, activation - sigmoid
+	Layer 6: 2 neurons, activation - sigmoid
+	Layer 7: 1 neurons, activation - sigmoid
+
+- There was no particular reason for this. I was simply trying over and over again to raise the model accuracy and adding layers until this point only made it better.
+
+Were you able to achieve the target model performance?
+
+-No.
+
+What steps did you take in your attempts to increase model performance?
+
+-I tried at least 10 times, only saving my 3 best attempts. I tried few layers and more layers. I tried higher starting neuron count, larger and smaller jumps between neuron sizes, and different activation functions.
+
+Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
+
+- At the end, the best results were Loss: 0.5583807826042175, Accuracy: 0.7286297082901001.
+- I believe an auto optimizer could help solve this better, but I believe that it is more of a "trash in, trash out" situation where the input data is simply not well classifiable.
+- I believe feature engineering is the best possible next step.
